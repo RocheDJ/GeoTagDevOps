@@ -1,0 +1,42 @@
+<div class="box box-link-shadow">
+    <nav class="navbar is-info-shadow">
+        <div class="navbar-brand">
+        </div>
+        <div id="navMenuColorinfo-example" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                     Admin Panel- <strong> {{user.firstName}}</strong>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet"
+                               data-social-target="https://" target="_blank"
+                               href="https://twitter.com/intent/tweet?text=GeoTag&amp;hashtags=GeoTag&amp;url=https://www.geotag.ie">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                Tweet
+                             </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-danger" href="/admin">
+                            <span class="icon">
+                               <i class="fas fa-users"></i>
+                            </span>
+                                <span>User Admin</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<script>
+    document.getElementById("{{active}}").classList.add("is-primary");
+</script>

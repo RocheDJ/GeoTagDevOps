@@ -1,0 +1,48 @@
+<form class="box"  action="/category/{{category._id}}/addpoi" method="POST" enctype="multipart/form-data">
+  <label>Enter Details For Point Of Interest:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Name" name="name">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Latitude" name="latitude">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Longitude" name="longitude">
+      </div>
+    </div>
+  </div>
+    <div id="file-geo-tag" class="file has-name is-fullwidth">
+        <label class="file-label">
+            <input class="file-input" type="file" name="imageFileName">
+            <span class="file-cta">
+                <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                </span>
+             <span class="file-label">
+                Choose a file…
+             </span>
+            </span>
+            <span class="file-name">
+                No file uploaded
+            </span>
+        </label>
+    </div>
+    <div>
+        <br>
+    </div>
+    <button class="button is-primary">Add Point Of Interest</button>
+    <script>
+        const fileInput = document.querySelector('#file-geo-tag input[type=file]');
+        // modified from https://stackoverflow.com/questions/5587973/javascript-upload-file
+        fileInput.onchange = async () => {
+            if (fileInput.files.length > 0) {
+                let myFile = fileInput[0];
+                const fileName = document.querySelector('#file-geo-tag .file-name');
+                fileName.textContent = fileInput.files[0].name;
+            }
+        }
+    </script>
+</form>
+

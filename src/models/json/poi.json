@@ -1,0 +1,36 @@
+{
+  "poi": [
+    {
+      "name": "POI 1",
+      "description": "--",
+      "latitude": -90,
+      "longitude": -90,
+      "_id": "acd005a4-8565-47e3-bbfb-0f232a70a9cf",
+      "categoryid": "f7ba50ba-41d1-4905-a81f-8c2e09a67745"
+    },
+    {
+      "title": "POI 2",
+      "description": "--",
+      "latitude": -90,
+      "longitude": -90,
+      "_id": "91053bf2-a558-49f6-8d95-4f9274955580",
+      "categoryid": "f7ba50ba-41d1-4905-a81f-8c2e09a67745"
+    },
+    {
+      "title": "POI 3",
+      "description": "--",
+      "latitude": -90,
+      "longitude": -90,
+      "_id": "a19ada68-4e91-411d-8e6f-b739b5be1e76",
+      "categoryid": "f7ba50ba-41d1-4905-a81f-8c2e09a67745"
+    },
+    {
+      "name": "Limestone Kiln",
+      "description": "A location for the burning of lime stone prior to spreading on farmland",
+      "latitude": -90,
+      "longitude": -90,
+      "_id": "4c427c2c-1560-413e-af8d-f21fbaaf2f94",
+      "categoryid": "5c3ecfc3-7cff-41f8-8eab-29363873fc71"
+    }
+  ]
+}

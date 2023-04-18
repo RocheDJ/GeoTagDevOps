@@ -1,0 +1,44 @@
+<table class="table is-fullwidth">
+    <thead>
+    <tr>
+        <th>First Name </th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>User Type</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each users}}
+        <tr>
+            <td>
+                {{firstName}}
+            </td>
+            <td>
+                {{lastName}}
+            </td>
+            <td>
+                {{email}}
+            </td>
+            <td>
+                {{userType}}
+            </td>
+            <td>
+                <a href="/admin/deleteuser/{{_id}}" class="ui icon">
+                    <i class="fas fa-trash"></i>
+                </a>
+                {{#ifeq userType "normal"}}
+                    <a href="/admin/promoteuser/{{_id}}" class="ui icon">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                {{/ifeq}}
+                {{#ifeq userType "admin"}}
+                    <a href="/admin/demoteuser/{{_id}}" class="ui icon" >
+                        <i class="fas fa-user-minus"></i>
+                    </a>
+                {{/ifeq}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
