@@ -75,3 +75,8 @@
 - Note node version fixed >16.0.0 for Glitch
 
 - Change app name in package to remove spaces
+
+## Version 0.2.23110
+
+- DevOps Version for assignment 2
+- Add MySQL Model

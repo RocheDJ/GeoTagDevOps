@@ -1,4 +1,4 @@
-# SETU HDip Computer Science  Full Stack Development Assignment 01
+# SETU HDip Computer Science  Dev Ops Assignment 2
 
 ---
 
@@ -16,9 +16,9 @@
 
 ---
 
-## Full Stack Development Assignment 01
+## DevOps  Assignment 02 Node application for AMI
 
-- Assignment to create an active web application to log and display places of interest using node js
+- Active application for deployment on AWS using node js
 
 ---
 

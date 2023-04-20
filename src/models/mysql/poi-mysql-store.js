@@ -1,7 +1,9 @@
 import { v4 } from "uuid";
+import os from "os";
 import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 import {POI} from "../mongo/poi.js";
+
 
 
 const connection = await mysql.createConnection({
@@ -32,12 +34,13 @@ export const poiMySQLStore = {
         };
 
         await connection.connect();
-        const query = "INSERT INTO pois (_id,name, description,latitude,longitude,image,categoryID) VALUES (?, ?, ?,? ,?, ?,?)";
+        const query = "INSERT INTO pois (_id,name, description,latitude,longitude,image,categoryID,server_id) VALUES (?, ?, ?,? ,?, ?,?,?)";
         try{
+            const ServerID = os.hostname();
             const [result] = await connection.query(query, [poiData._id,poiData.name, poiData.description,poiData.latitude,
-                poiData.longitude,poiData.image,poiData.categoryID]);
+                poiData.longitude,poiData.image,poiData.categoryID,ServerID.toString]);
         }catch (e) {
-             console.log(`addPOI Error = ${  e.description}` );
+             console.log(`Add POI Error = ${  e.description}` );
         }
 
         return poiData;
