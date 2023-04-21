@@ -30,15 +30,15 @@ export const poiMySQLStore = {
             latitude: poi.latitude,
             longitude: poi.longitude,
             image   : poi.image,
-            categoryID : categoryId
+            categoryID : categoryId,
+            serverID : os.hostname()
         };
 
         await connection.connect();
         const query = "INSERT INTO pois (_id,name, description,latitude,longitude,image,categoryID,server_id) VALUES (?, ?, ?,? ,?, ?,?,?)";
         try{
-            const ServerID = os.hostname();
             const [result] = await connection.query(query, [poiData._id,poiData.name, poiData.description,poiData.latitude,
-                poiData.longitude,poiData.image,poiData.categoryID,ServerID.toString]);
+                poiData.longitude,poiData.image,poiData.categoryID,poiData.serverID]);
         }catch (e) {
              console.log(`Add POI Error = ${  e.description}` );
         }
